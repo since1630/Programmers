@@ -10,3 +10,19 @@ while True:
         break
     n = s2
 print(cnt)
+
+
+## 수정 코드 ##
+n = int(input())
+
+cnt = 0
+result = n
+while True:
+    cnt += 1
+    mok = result // 10
+    remain = result % 10
+    sum = (mok + remain) % 10
+    result = (remain * 10) + sum
+    if result == n:
+        break
+print(cnt)
