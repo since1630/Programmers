@@ -3,12 +3,9 @@ function solution(strings, n) {
     strings.forEach((a) => {
       lst.push([a[n], a]);
     });
-    console.log(lst);
-    let arr = new Array(...lst);
     let newarr = [];
-    console.log(...lst);
-    arr.sort();
-    for (val of arr) {
+    lst.sort();
+    for (val of lst) {
       newarr.push(val[1]);
     }
     return newarr;
