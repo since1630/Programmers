@@ -1,19 +1,14 @@
 function solution(people, limit) {
-    let cnt = 0
-    let left = 0;
-    let right = people.length - 1;
-    people.sort((a,b) => (b-a))
-    
-    [80,50,40]
-    
-    while (left <= right) {
-      if (people[left] + people[right] <= limit) {
-        left++;
-        right--;
-      } else {
-        left++;
-      }
-      cnt++;
-    }
-    return cnt
+  let biggest = 0,
+    count = 0,
+    i = 0;
+  people.sort((a, b) => a - b);
+  while (people.length > 0) {
+    biggest = people.pop();
+    i = 0;
+    while (people[i] <= limit - biggest) i++;
+    if (i) people.splice(i - 1, 1);
+    count++;
+  }
+  return count;
 }
