@@ -31,8 +31,8 @@ function solution(s, n) {
     }
   });
 
-  if (str.indexOf("!")) {
-    str = str.replace(/!/gm, " ");
-  }
+//   if (str.indexOf("!")) {
+//     str = str.replace(/!/gm, " ");
+//   }
   return str;
 }
